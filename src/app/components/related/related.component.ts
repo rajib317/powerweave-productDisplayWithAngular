@@ -34,8 +34,7 @@ export class RelatedComponent implements OnInit {
     this.related = Related;
   }
   addToCart(item: Shoe) {}
-  test() {
-    console.log('State.CurrentShow=', State.currentShow);
+  updateShow() {
     this.currentShowUpdated.emit(true);
   }
 

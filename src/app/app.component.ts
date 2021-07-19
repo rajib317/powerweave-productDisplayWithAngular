@@ -17,14 +17,7 @@ export class AppComponent {
     const cartNumberEl = <HTMLElement>document.querySelector('.cart-number')!;
     cartNumberEl.textContent = `${cart.length}`;
   }
-  test() {
-    console.log('tme to update showcse');
-  }
-  addToCart(item: string) {
-    console.log(item);
-  }
   sendToShowcase() {
-    console.log('From App', State.currentShow);
     this.curDisplay = State.currentShow;
   }
 }

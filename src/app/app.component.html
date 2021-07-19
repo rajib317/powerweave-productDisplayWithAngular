@@ -30,13 +30,9 @@
 <div class="container">
   <app-showcase
     (cartUpdate)="updateCartView($event)"
-    (showcaseUpdated)="test()"
     [currentShow]="curDisplay"
   ></app-showcase>
-  <app-related
-    (cartUpdated)="addToCart('text')"
-    (currentShowUpdated)="sendToShowcase()"
-  ></app-related>
+  <app-related (currentShowUpdated)="sendToShowcase()"></app-related>
 </div>
 <footer class="footer">
   <div class="container">
