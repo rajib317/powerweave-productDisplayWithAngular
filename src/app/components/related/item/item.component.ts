@@ -22,6 +22,7 @@ export class ItemComponent implements OnInit {
   renderMe(item: Shoe) {
     State.currentShow = item;
     this.currentShowUpdated.emit(true);
+    window.scrollTo({ top: 132 });
   }
 
   ngOnInit(): void {}
