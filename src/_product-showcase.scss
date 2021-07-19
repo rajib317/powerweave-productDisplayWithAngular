@@ -33,6 +33,8 @@
   }
   &--product-image {
     flex: 1 0 0;
+    display: flex;
+    justify-content: left;
     @media only screen and (max-width: $bp-small) {
       order: -1;
     }

@@ -1,4 +1,4 @@
-<div class="product-list--item" (click)="renderMe(relatedItem)">
+<div (click)="renderMe(relatedItem)">
   <img src="{{ relatedItem.image[0].thumb }}" alt="{{ relatedItem.name }}" />
   <div class="title">{{ relatedItem.name }}</div>
   <div class="price">${{ relatedItem.price }}</div>
