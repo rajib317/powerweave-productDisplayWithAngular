@@ -1,0 +1,11 @@
+<aside class="product-list">
+  <h4 class="product-list--label">Related Products</h4>
+  <div class="product-list--content">
+    <app-item
+      *ngFor="let relatedItem of related"
+      [relatedItem]="relatedItem"
+      (cartUpdated)="updateCartView()"
+      (currentShowUpdated)="test()"
+    ></app-item>
+  </div>
+</aside>

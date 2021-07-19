@@ -1,0 +1,46 @@
+<main class="product-showcase">
+  <section class="product-showcase--thumbs-container">
+    <img
+      *ngFor="let src of currentShow.image"
+      src="{{ src.thumb }}"
+      (click)="renderImage(src.main)"
+      alt=""
+    />
+  </section>
+  <section class="product-showcase--product-image">
+    <img
+      src="{{ currentShow.image[0].main }}"
+      id="product--main-image"
+      alt=""
+    />
+  </section>
+  <section class="product-info">
+    <h1 class="product-info--title">{{ currentShow.name }}</h1>
+    <div class="product-info--sku">#{{ currentShow.sku }}</div>
+    <div class="product-info--desc">
+      <p>
+        {{ currentShow.details }}
+      </p>
+    </div>
+    <div class="product-info--options">
+      <div class="product-info--options--label">Select Size</div>
+      <ul>
+        <li
+          *ngFor="let size of currentShow.sizes; let i = index"
+          (click)="updatePrice(i)"
+        >
+          {{ size }}
+        </li>
+      </ul>
+    </div>
+    <div class="product-info--purchase">
+      <div class="price">$ {{ currentShow.price }}</div>
+      <div class="btn-container">
+        <button class="btn btn--primary">Buy Now</button>
+        <button class="btn btn--primary" (click)="addToCart(currentShow)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
