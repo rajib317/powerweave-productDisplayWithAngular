@@ -11,12 +11,13 @@ export class ItemComponent implements OnInit {
   @Input() relatedItem!: Shoe;
   @Output() cartUpdated: EventEmitter<boolean> = new EventEmitter();
   @Output() currentShowUpdated: EventEmitter<boolean> = new EventEmitter();
-
+  btnText = 'Add to cart';
   constructor() {}
 
   addToCart(item: Shoe) {
     State.cart.push(item);
     this.cartUpdated.emit(true);
+    this.btnText = 'Added';
   }
 
   renderMe(item: Shoe) {
